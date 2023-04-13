@@ -53,14 +53,11 @@ export default function Home() {
               lg: "0",
               xl: "0",
             }}
-            justifyContent="center"
-            alignItems="center"
+            
           >
             <Box
               display="flex"
               flexDirection="column"
-              // justifyContent="start"
-              alignItems="start"
               paddingLeft={{
                 base: "20px",
                 md: "60px",
