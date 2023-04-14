@@ -100,7 +100,15 @@ function Header() {
                     color:'white',
                     textDecoration:'none',
                     fontWeight:"800"
-                  }} >
+                  }}
+
+                  _active={{
+                    color:'white',
+                    textDecoration:'none',
+                    fontWeight:"800"
+                  }}
+                  
+                  >
                     _about-me
                   </Link>
                 </th>

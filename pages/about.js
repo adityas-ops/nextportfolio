@@ -29,11 +29,29 @@ import {
 } from "react-icons/ri";
 import { BsMarkdownFill } from "react-icons/bs";
 import Link from "next/link";
+import data from "@/public/data";
+import { useEffect } from "react";
+import High from "@/components/High"
+import Inter from "@/components/Inter";
+import Intrest from "@/components/Intrest";
+import Btech from "@/components/Btech";
+import About from "@/components/About"
 
 export default function about() {
   const [disableNd, setDisableNd] = useState(false);
   const [disableNd1, setDisableNd1] = useState(false);
   const [disableNd2, setDisableNd2] = useState(false);
+ const [index,setIndex] = useState(0)
+
+
+    useEffect(() => {
+        console.log(index);
+        setIndex(index)
+    },[index])
+console.log(index);
+console.log(data[1])
+
+const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
 
   return (
     <>
@@ -49,7 +67,6 @@ export default function about() {
         }}
         overflow="hidden"
         bg="#011627"
-        // 1E2D3D
       >
         <Box
           width="100%"
@@ -99,6 +116,7 @@ export default function about() {
                   </VStack>
                 </Box>
                 <Box width="100%">
+             
                   <Box
                     height="40px"
                     width="100%"
@@ -171,6 +189,7 @@ export default function about() {
                               alignItems="center"
                               justifyContent="start"
                               cursor="pointer"
+                              onClick={()=>setIndex(0)}
                             >
                               <Icon
                                 as={BsMarkdownFill}
@@ -231,6 +250,7 @@ export default function about() {
                               alignItems="center"
                               justifyContent="start"
                               cursor="pointer"
+                              onClick={()=>setIndex(1)}
                             >
                               <Icon
                                 as={BsMarkdownFill}
@@ -239,7 +259,7 @@ export default function about() {
                                 mr="5px"
                               />
                               <Text color="white" fontSize="14px">
-                                About
+                                interests
                               </Text>
                             </Box>
                           </VStack>
@@ -296,6 +316,7 @@ export default function about() {
                               alignItems="center"
                               justifyContent="start"
                               cursor="pointer"
+                              onClick={()=>setIndex(2)}
                             >
                               <Icon
                                 as={BsMarkdownFill}
@@ -314,6 +335,7 @@ export default function about() {
                               alignItems="center"
                               justifyContent="start"
                               cursor="pointer"
+                              onClick={()=>setIndex(3)}
                             >
                               <Icon
                                 as={BsMarkdownFill}
@@ -332,6 +354,11 @@ export default function about() {
                               alignItems="center"
                               justifyContent="start"
                               cursor="pointer"
+                                onClick={
+                                    () => {
+                                        setIndex(4)
+                                    }
+                                }
                             >
                               <Icon
                                 as={BsMarkdownFill}
@@ -347,7 +374,10 @@ export default function about() {
                         </AccordionPanel>
                       </AccordionItem>
                     </Accordion>
+                    
                   </Box>
+                 
+
                   <Box
                     height="40px"
                     width="100%"
@@ -405,7 +435,7 @@ export default function about() {
                           marginLeft: "15px",
                           marginTop: "10px",
                         }}
-                        href="mailto:adityakushinagar123@gmail.com"
+                        href="tel:+919792855377"
                       >
                         <Icon
                           as={RiPhoneLine}
@@ -437,15 +467,67 @@ export default function about() {
                       ml="15px"
                       borderRight="1px solid #607B96"
                     >
-                       contact-info
+                      {
+                        headlines[index]
+                      }
                        {" "}
                       <Icon
                         as={RiCloseFill}
                         boxSize="24px"
                         mr="10px"
                       />
-                     
                     </Text>
+                    <Flex>
+                        <Box 
+                            width="100%"
+                            height="500px"
+                            marginLeft="30px"
+                            marginTop="30px"
+                        >
+                            {
+                                (index === 0 )? (
+                                    <About/>
+                                ):
+                                (index === 1) ? (
+                                    <Intrest/>
+                                ):
+                                (index === 2) ? (
+                                    <Btech/>
+                                ):
+                                (index === 3) ? (
+                                    <Inter/>
+                                ):
+                                (index === 4) ? (
+                                    <High/>
+                                ):
+                                (
+                                    <>
+                                        {" "}
+                                    </>
+                                )
+                            }
+
+                        </Box>
+                        <Box 
+                        width="5%"
+                        height="83.3vh"
+                        borderLeft= "1px solid #607B96"
+                        display="flex"
+
+                        justifyContent="center"
+                        // alignItems="center"
+                        >
+                            <Box
+                             width="70%"
+                             height="8px"
+                             bg="blue.100"
+                             mt="7px"
+                            >
+
+                            </Box>
+                        </Box>
+
+                        </Flex>
                     </Box>
             </Box>
             {/* third div */}
