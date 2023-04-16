@@ -36,6 +36,7 @@ import Inter from "@/components/Inter";
 import Intrest from "@/components/Intrest";
 import Btech from "@/components/Btech";
 import About from "@/components/About"
+import Code from "@/components/Code";
 
 export default function about() {
   const [disableNd, setDisableNd] = useState(false);
@@ -531,7 +532,9 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                     </Box>
             </Box>
             {/* third div */}
-            <Box>s</Box>
+            <Box>
+              <Code/>
+            </Box>
           </Flex>
         </Box>
       </Box>
