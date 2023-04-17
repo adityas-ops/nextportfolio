@@ -19,40 +19,39 @@ import {
   RiArrowDownSLine,
   RiGamepadFill,
   RiCloseFill,
-  RiChatSmile3Fill,
   RiFolder3Fill,
-  RiStarSFill,
-  RiBugFill,
   RiArrowRightSLine,
   RiMailFill,
   RiPhoneLine,
 } from "react-icons/ri";
 import { BsMarkdownFill } from "react-icons/bs";
 import Link from "next/link";
-import data from "@/public/data";
 import { useEffect } from "react";
-import High from "@/components/High"
+import High from "@/components/High";
 import Inter from "@/components/Inter";
 import Intrest from "@/components/Intrest";
 import Btech from "@/components/Btech";
-import About from "@/components/About"
+import About from "@/components/About";
 import Code from "@/components/Code";
 
 export default function about() {
   const [disableNd, setDisableNd] = useState(false);
   const [disableNd1, setDisableNd1] = useState(false);
   const [disableNd2, setDisableNd2] = useState(false);
- const [index,setIndex] = useState(0)
+  const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    console.log(index);
+    setIndex(index);
+  }, [index]);
 
-    useEffect(() => {
-        console.log(index);
-        setIndex(index)
-    },[index])
-console.log(index);
-console.log(data[1])
-
-const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
+  const headlines = [
+    "about-me",
+    "intrests",
+    "B.Tech",
+    "Intermediate",
+    "High-school",
+  ];
 
   return (
     <>
@@ -101,23 +100,31 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                       mt="18px"
                       color="#607B96"
                       boxSize="24px"
+                      _hover={{
+                        color: "white",
+                      }}
                     />
                     <Icon
                       as={RiUser4Fill}
                       mt="58px"
                       color="#607B96"
                       boxSize="24px"
+                      _hover={{
+                        color: "white",
+                      }}
                     />
                     <Icon
                       as={RiGamepadFill}
                       mt="24px"
                       color="#607B96"
                       boxSize="24px"
+                      _hover={{
+                        color: "white",
+                      }}
                     />
                   </VStack>
                 </Box>
                 <Box width="100%">
-             
                   <Box
                     height="40px"
                     width="100%"
@@ -170,6 +177,9 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                               display="flex"
                               alignItems="center"
                               justifyContent="space-envely"
+                              _hover={{
+                                color: "white",
+                              }}
                             >
                               <Icon
                                 as={RiFolder3Fill}
@@ -190,15 +200,18 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                               alignItems="center"
                               justifyContent="start"
                               cursor="pointer"
-                              onClick={()=>setIndex(0)}
+                              onClick={() => setIndex(0)}
+                              _hover={{
+                                color: "white",
+                              }}
                             >
                               <Icon
                                 as={BsMarkdownFill}
-                                color="white"
+                                // color="white"
                                 boxSize="16px"
                                 mr="5px"
                               />
-                              <Text color="white" fontSize="14px">
+                              <Text  fontSize="14px">
                                 About
                               </Text>
                             </Box>
@@ -231,6 +244,9 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                               display="flex"
                               alignItems="center"
                               justifyContent="space-envely"
+                              _hover={{
+                                color: "white",
+                              }}
                             >
                               <Icon
                                 as={RiFolder3Fill}
@@ -251,15 +267,18 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                               alignItems="center"
                               justifyContent="start"
                               cursor="pointer"
-                              onClick={()=>setIndex(1)}
+                              onClick={() => setIndex(1)}
+                              _hover={{
+                                color: "white",
+                              }}
                             >
                               <Icon
                                 as={BsMarkdownFill}
-                                color="white"
+                                // color="white"
                                 boxSize="16px"
                                 mr="5px"
                               />
-                              <Text color="white" fontSize="14px">
+                              <Text  fontSize="14px">
                                 interests
                               </Text>
                             </Box>
@@ -292,6 +311,9 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                               display="flex"
                               alignItems="center"
                               justifyContent="space-envely"
+                              _hover={{
+                                color: "white",
+                              }}
                             >
                               <Icon
                                 as={RiFolder3Fill}
@@ -317,15 +339,18 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                               alignItems="center"
                               justifyContent="start"
                               cursor="pointer"
-                              onClick={()=>setIndex(2)}
+                              onClick={() => setIndex(2)}
+                              _hover={{
+                                color: "white",
+                              }}
                             >
                               <Icon
                                 as={BsMarkdownFill}
-                                color="white"
+                                // color="white"
                                 boxSize="16px"
                                 mr="5px"
                               />
-                              <Text color="white" fontSize="14px">
+                              <Text fontSize="14px">
                                 B.Tech
                               </Text>
                             </Box>
@@ -336,7 +361,7 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                               alignItems="center"
                               justifyContent="start"
                               cursor="pointer"
-                              onClick={()=>setIndex(3)}
+                              onClick={() => setIndex(3)}
                             >
                               <Icon
                                 as={BsMarkdownFill}
@@ -355,19 +380,20 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                               alignItems="center"
                               justifyContent="start"
                               cursor="pointer"
-                                onClick={
-                                    () => {
-                                        setIndex(4)
-                                    }
-                                }
+                              onClick={() => {
+                                setIndex(4);
+                              }}
+                              _hover={{
+                                color: "white",
+                              }}
                             >
                               <Icon
                                 as={BsMarkdownFill}
-                                color="white"
+                                // color="white"
                                 boxSize="16px"
                                 mr="5px"
                               />
-                              <Text color="white" fontSize="14px">
+                              <Text  fontSize="14px">
                                 high-school
                               </Text>
                             </Box>
@@ -375,9 +401,7 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                         </AccordionPanel>
                       </AccordionItem>
                     </Accordion>
-                    
                   </Box>
-                 
 
                   <Box
                     height="40px"
@@ -417,6 +441,9 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                           wordWrap: "wrap",
                         }}
                         href="mailto:adityakushinagar123@gmail.com"
+                        _hover={{
+                                color: "white",
+                              }}
                       >
                         <Icon
                           as={RiMailFill}
@@ -437,6 +464,9 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
                           marginTop: "10px",
                         }}
                         href="tel:+919792855377"
+                        _hover={{
+                                color: "white",
+                              }}
                       >
                         <Icon
                           as={RiPhoneLine}
@@ -453,87 +483,96 @@ const headlines = ["about-me","intrests","B.Tech","Intermediate","High-school"]
             </Box>
             {/* second div */}
             <Box width="40%" borderRight="1px solid #607B96">
-            <Box
-                    height="40px"
+              <Box height="40px" width="100%" borderBottom="1px solid #607B96">
+                <Text
+                  width="30%"
+                  height="100%"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="space-between"
+                  fontSize="16px"
+                  ml="15px"
+                  borderRight="1px solid #607B96"
+                >
+                  {headlines[index]}{" "}
+                 {
+                    index !== 5 ? (
+                      <Icon as={RiCloseFill} boxSize="24px" mr="10px" onClick={()=>setIndex(5)} />
+                    ):
+                    (
+                      <></>
+                    )
+                 }
+                </Text>
+                <Flex>
+                  <Box
                     width="100%"
-                    borderBottom="1px solid #607B96"
+                    height="500px"
+                    marginLeft="30px"
+                    marginTop="30px"
                   >
-                    <Text
-                      width="30%"
-                      height="100%"
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="space-between"
-                      fontSize="16px"
-                      ml="15px"
-                      borderRight="1px solid #607B96"
-                    >
-                      {
-                        headlines[index]
-                      }
-                       {" "}
-                      <Icon
-                        as={RiCloseFill}
-                        boxSize="24px"
-                        mr="10px"
-                      />
-                    </Text>
-                    <Flex>
-                        <Box 
-                            width="100%"
-                            height="500px"
-                            marginLeft="30px"
-                            marginTop="30px"
-                        >
-                            {
-                                (index === 0 )? (
-                                    <About/>
-                                ):
-                                (index === 1) ? (
-                                    <Intrest/>
-                                ):
-                                (index === 2) ? (
-                                    <Btech/>
-                                ):
-                                (index === 3) ? (
-                                    <Inter/>
-                                ):
-                                (index === 4) ? (
-                                    <High/>
-                                ):
-                                (
-                                    <>
-                                        {" "}
-                                    </>
-                                )
-                            }
-
-                        </Box>
-                        <Box 
-                        width="5%"
-                        height="83.3vh"
-                        borderLeft= "1px solid #607B96"
-                        display="flex"
-
-                        justifyContent="center"
-                        // alignItems="center"
-                        >
-                            <Box
-                             width="70%"
-                             height="8px"
-                             bg="blue.100"
-                             mt="7px"
-                            >
-
-                            </Box>
-                        </Box>
-
-                        </Flex>
-                    </Box>
+                    {index === 0 ? (
+                      <About />
+                    ) : index === 1 ? (
+                      <Intrest />
+                    ) : index === 2 ? (
+                      <Btech />
+                    ) : index === 3 ? (
+                      <Inter />
+                    ) : index === 4 ? (
+                      <High />
+                    ) : (
+                      <> </>
+                    )}
+                  </Box>
+                  <Box
+                    width="5%"
+                    height="83.3vh"
+                    borderLeft="1px solid #607B96"
+                    display="flex"
+                    justifyContent="center"
+                    // alignItems="center"
+                  >
+                    <Box width="70%" height="8px" bg="blue.100" mt="7px"></Box>
+                  </Box>
+                </Flex>
+              </Box>
             </Box>
             {/* third div */}
-            <Box>
-              <Code/>
+            <Box 
+            width="37.7%"
+            >
+            <Box height="40px" width="100%" borderBottom="1px solid #607B96">
+                <Text
+                  width="30%"
+                  height="100%"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="space-between"
+                  fontSize="16px"
+                  ml="15px"
+                >
+                </Text>
+              </Box>
+              <Flex>
+                <Box width="95%" 
+                  display="flex"
+                  // alignItems="center"
+                  justifyContent="center"
+                >
+                      <Code/>
+                </Box>
+                <Box
+                    width="5%"
+                    height="83.3vh"
+                    borderLeft="1px solid #607B96"
+                    display="flex"
+                    justifyContent="center"
+                    // alignItems="center"
+                  >
+                    <Box width="70%" height="8px" bg="blue.100" mt="7px"></Box>
+                  </Box>
+              </Flex>
             </Box>
           </Flex>
         </Box>

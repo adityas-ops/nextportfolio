@@ -1,7 +1,7 @@
 import React from 'react'
 import {Text, VStack } from '@chakra-ui/react';
 function Inter() {
-  const data = ["/**","* Intermediate","* 2017-2019","* I have passed Intermediate in 2019.","* from maharshi arvind vidya mandir kasia kushinagar","* board of uttar pradesh board"]
+  const data = ["/**","* Intermediate","* 2017-2019","* I have passed Intermediate in 2019.","* from maharshi arvind vidya mandir kasia","* kushinagar","* board of uttar pradesh board.","* with aggregate 85%."]
   return (
    <>
     <VStack
