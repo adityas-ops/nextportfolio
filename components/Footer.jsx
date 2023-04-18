@@ -1,6 +1,6 @@
 
-import { Tr,Td, Table, Thead, useBreakpointValue, Icon, Text, Box } from '@chakra-ui/react'
-import Link from 'next/link'
+import { Tr,Td, Table, Thead, useBreakpointValue, Icon, Text, Box,Link  } from '@chakra-ui/react'
+// import from 'next/link'
 import React from 'react'
 import {BsTwitter} from 'react-icons/bs'
 import {FaLinkedinIn} from 'react-icons/fa'
