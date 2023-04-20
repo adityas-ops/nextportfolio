@@ -45,6 +45,7 @@ function Code() {
           justifyContent="center"
           alignItems="center"
           width="100%"
+         overflow="hidden"
         >
           <Flex width="90%"  
             display="flex"

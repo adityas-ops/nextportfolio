@@ -15,7 +15,7 @@ function Footer() {
             variant="simple"
             width="100%"
             height="40px"
-            bg="transparent"
+            bg="#011627"
             borderTop="1px solid #607B96"
             style={{
               position:'fixed',

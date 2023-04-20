@@ -1,11 +1,9 @@
 import {
   Accordion,
   AccordionButton,
-  AccordionIcon,
   AccordionItem,
   AccordionPanel,
   Box,
-  Button,
   Flex,
   Icon,
   Text,
@@ -16,7 +14,6 @@ import React, { useState } from "react";
 import {
   RiTerminalFill,
   RiArrowDownSFill,
-  RiArrowRightFill,
   RiUser4Fill,
   RiArrowDownSLine,
   RiGamepadFill,
@@ -28,7 +25,6 @@ import {
   RiArrowRightSFill,
 } from "react-icons/ri";
 import { BsMarkdownFill } from "react-icons/bs";
-import Link from "next/link";
 import { useEffect } from "react";
 import High from "@/components/High";
 import Inter from "@/components/Inter";
@@ -44,7 +40,6 @@ export default function about() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    // console.log(index);
     setIndex(index);
   }, [index]);
 
@@ -363,15 +358,24 @@ export default function about() {
                                 alignItems="center"
                                 justifyContent="start"
                                 cursor="pointer"
+                                _hover={{
+                                  color:'white'
+                                }}
+                                _active={{
+                                  color:'red' 
+                                }}
+                                _focus={{
+                                  color:'red'
+                                }}
                                 onClick={() => setIndex(3)}
                               >
                                 <Icon
                                   as={BsMarkdownFill}
-                                  color="white"
+                               
                                   boxSize="16px"
                                   mr="5px"
                                 />
-                                <Text color="white" fontSize="14px">
+                                <Text  fontSize="14px">
                                   intermediate
                                 </Text>
                               </Box>

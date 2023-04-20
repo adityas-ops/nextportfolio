@@ -66,6 +66,12 @@ function Header() {
                       textDecoration: "none",
                       fontWeight: "800",
                     }}
+                    _active={{
+                      color:'red'
+                    }}
+                    _focus={{
+                      color:'red'
+                    }}
                   >
                     Aditya-Sharma
                   </Link>
