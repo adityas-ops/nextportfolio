@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import NextLink from 'next/link'
 import {
   Box,
   Flex,
@@ -14,6 +15,8 @@ import {
   DrawerHeader,
   useDisclosure,
   VStack,
+  Th,
+  Tr,
 } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/react";
 import { HiOutlineMenu } from "react-icons/hi";
@@ -25,10 +28,9 @@ function Header() {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-
   const navname = ["_hello", "_about-me", "_projects", "_contact"];
   const links = ["/", "about", "projects", "contact"];
-
+  // const [active,setActive] = useState(false)
   return (
     <>
       {isDesktop ? (
@@ -49,16 +51,21 @@ function Header() {
             borderBottom="1px solid #607B96"
           >
             <Thead>
-              <tr>
+              <tr 
+             
+              >
                 <th
                   style={{
                     borderRight: "1px solid #607B96",
-                    width: "20%",
+                    width:"20%",
                     textAlign: "left",
-                    paddingLeft: "20px",
+                    paddingLeft:"20px",
+                    borderBottom:"none"
                   }}
+              
                 >
                   <Link
+                  as={NextLink}
                     href="/"
                     fontWeight="500"
                     _hover={{
@@ -66,12 +73,15 @@ function Header() {
                       textDecoration: "none",
                       fontWeight: "800",
                     }}
+
                     _active={{
                       color:'red'
                     }}
                     _focus={{
                       color:'red'
                     }}
+                    fontSize="16px"
+                    fontFamily='Fira Code'
                   >
                     Aditya-Sharma
                   </Link>
@@ -79,10 +89,13 @@ function Header() {
                 <th
                   style={{
                     borderRight: "1px solid #607B96",
-                    width: "10%",
+                    width:"10%",
+                    borderBottom:"none",
                   }}
+                 
                 >
                   <Link
+                  as={NextLink}
                     href="/"
                     fontWeight="400"
                     _hover={{
@@ -101,6 +114,7 @@ function Header() {
                   }}
                 >
                   <Link
+                  as={NextLink}
                     href="/about"
                     fontWeight="400"
                     _hover={{
@@ -124,6 +138,7 @@ function Header() {
                   }}
                 >
                   <Link
+                  as={NextLink}
                     href="/projects"
                     fontWeight="400"
                     _hover={{
@@ -150,6 +165,7 @@ function Header() {
                   }}
                 >
                   <Link
+                  as={NextLink}
                     href="/contact"
                     fontWeight="400"
                     _hover={{
@@ -188,6 +204,7 @@ function Header() {
             padding="0.5rem"
           >
             <Link
+            as={NextLink}
               href="/"
               fontWeight="300"
               fontSize="18px"
@@ -230,6 +247,7 @@ function Header() {
                   <DrawerCloseButton />
                   <DrawerHeader borderBottom="1px solid #607B96" height="56px">
                     <Link
+                    as={NextLink}
                       href="/"
                       fontWeight="300"
                       fontSize="18px"
@@ -263,6 +281,7 @@ function Header() {
                           fontWeight="500"
                         >
                           <Link
+                          as={NextLink}
                             href={links[index]}
                             fontWeight="200"
                             _hover={{
