@@ -60,7 +60,12 @@ function Formi() {
   return (
     <>
       <Box
-        width="90%"
+        width={{
+          base: "100%",
+          md: "90%", 
+          lg: "90%",
+          xl: "90%",
+        }}
         height="100%"
         display="flex"
         alignItems="center"
@@ -119,7 +124,12 @@ function Formi() {
             (
                 <>
                 <FormControl
-          width="70%"
+          width={{
+            base: "90%",
+            md: "90%",
+            lg: "7%",
+            xl: "70%",
+          }}
           height="80%"
           display="flex"
           alignItems="start"
