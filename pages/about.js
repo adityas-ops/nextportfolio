@@ -434,20 +434,8 @@ export default function about() {
                       </Text>
                       <Box>
                         <a
-                          style={{
-                            textDecoration: "none",
-                            color: "#607B96",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "start",
-                            marginLeft: "15px",
-                            marginTop: "10px",
-                            wordWrap: "wrap",
-                          }}
+                           className="linki"
                           href="mailto:adityakushinagar123@gmail.com"
-                          _hover={{
-                            color: "white",
-                          }}
                         >
                           <Icon
                             as={RiMailFill}
@@ -458,19 +446,8 @@ export default function about() {
                           contact me
                         </a>
                         <a
-                          style={{
-                            textDecoration: "none",
-                            color: "#607B96",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "start",
-                            marginLeft: "15px",
-                            marginTop: "10px",
-                          }}
+                           className="linki"
                           href="tel:+919792855377"
-                          _hover={{
-                            color: "white",
-                          }}
                         >
                           <Icon
                             as={RiPhoneLine}
