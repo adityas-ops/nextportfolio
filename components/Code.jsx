@@ -14,7 +14,6 @@ function Code() {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setData(data);
         const code = atob(data.content);
         setCode(code);

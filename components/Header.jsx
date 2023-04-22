@@ -15,8 +15,6 @@ import {
   DrawerHeader,
   useDisclosure,
   VStack,
-  Th,
-  Tr,
 } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/react";
 import { HiOutlineMenu } from "react-icons/hi";
@@ -30,7 +28,6 @@ function Header() {
   const btnRef = React.useRef();
   const navname = ["_hello", "_about-me", "_projects", "_contact"];
   const links = ["/", "about", "projects", "contact"];
-  // const [active,setActive] = useState(false)
   return (
     <>
       {isDesktop ? (
