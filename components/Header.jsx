@@ -15,6 +15,10 @@ import {
   DrawerHeader,
   useDisclosure,
   VStack,
+  Tr,
+  Th,
+  HStack,
+  Text,
 } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/react";
 import { HiOutlineMenu } from "react-icons/hi";
@@ -40,143 +44,194 @@ function Header() {
           top="0"
           zIndex="100"
         >
-          <Table
-            variant="simple"
-            width="100%"
-            height="100%"
-            bg="transparent"
-            borderBottom="1px solid #607B96"
+        <HStack
+          w="100%"
+          h="100%"
+          bg="transparent"
+          borderBottom="1px solid #607B96"
           >
-            <Thead>
-              <tr 
-             
-              >
-                <th
-                  style={{
-                    borderRight: "1px solid #607B96",
-                    width:"20%",
-                    textAlign: "left",
-                    paddingLeft:"20px",
-                    borderBottom:"none"
-                  }}
-              
-                >
-                  <Link
-                  as={NextLink}
-                    href="/"
-                    fontWeight="500"
-                    _hover={{
-                      color: "white",
-                      textDecoration: "none",
-                      fontWeight: "800",
-                    }}
+          <Link
+            as={NextLink}
+            href="/"
+            fontWeight="400"
+            _hover={{
+              color: "white",
+              textDecoration: "none",
+              fontWeight: "800",
+            }}
+            width="22.3%"
+            height="100%"
+            _focus={{
+              borderBottom:"1.5px solid #d87a32",
+              color:"white",
+              fontWeight:"800"
+            }}
+          >
+            <Box
 
-                    _active={{
-                      color:'red'
-                    }}
-                    _focus={{
-                      color:'red'
-                    }}
-                    fontSize="16px"
-                    fontFamily='Fira Code'
-                  >
-                    Aditya-Sharma
-                  </Link>
-                </th>
-                <th
-                  style={{
-                    borderRight: "1px solid #607B96",
-                    width:"10%",
-                    borderBottom:"none",
-                  }}
-                 
+              display="flex"
+              alignItems="center"
+              justifyContent="left"
+             
+              height="100%"
+              borderRight="1px solid #607B96"
+              _hover={{
+                borderBottom:"2px solid #FEA55F",
+                margin:"0",
+                padding:"0"
+              }}
+            >
+              <Text
+          
+                fontWeight="400"
+                paddingLeft="30px"
+                fontSize="1.1rem"
+               
                 >
-                  <Link
-                  as={NextLink}
-                    href="/"
-                    fontWeight="400"
-                    _hover={{
-                      color: "white",
-                      textDecoration: "none",
-                      fontWeight: "800",
-                    }}
-                  >
-                    _hello
-                  </Link>
-                </th>
-                <th
-                  style={{
-                    borderRight: "1px solid #607B96",
-                    width: "10%",
-                  }}
-                >
-                  <Link
-                  as={NextLink}
-                    href="/about"
-                    fontWeight="400"
-                    _hover={{
-                      color: "white",
-                      textDecoration: "none",
-                      fontWeight: "800",
-                    }}
-                    _active={{
-                      color: "white",
-                      textDecoration: "none",
-                      fontWeight: "800",
-                    }}
-                  >
-                    _about-me
-                  </Link>
-                </th>
-                <th
-                  style={{
-                    borderRight: "1px solid #607B96",
-                    width: "10%",
-                  }}
-                >
-                  <Link
-                  as={NextLink}
-                    href="/projects"
-                    fontWeight="400"
-                    _hover={{
-                      color: "white",
-                      textDecoration: "none",
-                      fontWeight: "800",
-                    }}
-                  >
-                    _projects
-                  </Link>
-                </th>
-                <th
-                  style={{
-                    content: "",
-                    width: "30%",
-                  }}
-                ></th>
-                <th
-                  style={{
-                    borderLeft: "1px solid #607B96",
-                    width: "10%",
-                    textAlign: "right",
-                    paddingRight: "20px",
-                  }}
-                >
-                  <Link
-                  as={NextLink}
-                    href="/contact"
-                    fontWeight="400"
-                    _hover={{
-                      color: "white",
-                      textDecoration: "none",
-                      fontWeight: "800",
-                    }}
-                  >
-                    _contact
-                  </Link>
-                </th>
-              </tr>
-            </Thead>
-          </Table>
+                  aditya-sharma
+                </Text>
+            </Box>
+          </Link>
+
+          <Link
+            as={NextLink}
+            href="/"
+            fontWeight="400"
+            _hover={{
+              color: "white",
+              textDecoration: "none",
+              fontWeight: "800",
+            }}
+            width="13%"
+            height="100%"
+            _focus={{
+              borderBottom:"1.5px solid #d87a32",
+              color:"white",
+              fontWeight:"800"
+            }}
+          >
+            <Box
+
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              // width="13%"
+              height="100%"
+              borderRight="1px solid #607B96"
+              _hover={{
+                borderBottom:"2px solid #FEA55F",
+                margin:"0",
+                padding:"0"
+              }}
+            >
+              _hello
+            </Box>
+          </Link>
+         <Link
+            as={NextLink}
+            href="/about"
+            fontWeight="400"
+            _hover={{
+              color: "white",
+              textDecoration: "none",
+              fontWeight: "800",
+            }}
+            width="13%"
+            height="100%"
+            _focus={{
+              borderBottom:"1.5px solid #d87a32",
+              color:"white",
+              fontWeight:"800"
+            }}
+          >
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              // width="13%"
+              height="100%"
+              borderRight="1px solid #607B96"
+              _hover={{
+                borderBottom:"2px solid #FEA55F",
+                margin:"0",
+                padding:"0"
+                
+              }}
+            >
+              _about-me
+            </Box>
+          </Link>
+          <Link
+            as={NextLink}
+            href="/projects"
+            fontWeight="400"
+            _hover={{
+              color: "white",
+              textDecoration: "none",
+              fontWeight: "800",
+            }}
+            width="13%"
+            height="100%"
+            _focus={{
+              borderBottom:"1.5px solid #d87a32",
+              color:"white",
+              fontWeight:"800"
+            }}
+          >
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              // width="13%"
+              height="100%"
+              borderRight="1px solid #607B96"
+              _hover={{
+                borderBottom:"2px solid #FEA55F",
+                margin:"0",
+                padding:"0"
+
+              }}
+            >
+              _projects
+            </Box>
+          </Link>
+          <Spacer/>
+          <Link
+            as={NextLink}
+            href="/contact"
+            fontWeight="400"
+            _hover={{
+              color: "white",
+              textDecoration: "none",
+              fontWeight: "800",
+            }}
+            width="13%"
+            height="100%"
+            _focus={{
+              borderBottom:"1.5px solid #d87a32",
+              color:"white",
+              fontWeight:"800"
+            }}
+          >
+            <Box
+
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              // width="13%"
+              height="100%"
+              borderLeft="1px solid #607B96"
+              _hover={{
+                borderBottom:"2px solid #FEA55F",
+                margin:"0",
+                padding:"0"
+              }}
+            >
+              _contact
+            </Box>
+          </Link>
+
+          </HStack>
         </Box>
       ) : (
         <Box

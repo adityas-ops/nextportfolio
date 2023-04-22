@@ -24,6 +24,7 @@ body {
   align-items: center;
   z-index: -100;
   color:rgb(36, 105, 216);
+
 }
 
 .circle1{
@@ -64,6 +65,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* color: #d87a32; */
 }
 
 .linki{
