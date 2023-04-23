@@ -321,30 +321,36 @@ function Header() {
                   {navname.map((item, index) => {
                     return (
                       <>
-                        <Box
-                          w="100%"
-                          h="56px"
-                          display="flex"
-                          alignItems="center"
-                          justifyContent="start"
-                          paddingLeft="20px"
-                          borderBottom="1px solid #607B96"
-                          color="white"
-                          fontWeight="500"
+                        <Link 
+                        as={NextLink}
+                        width="100%"
+                        height="56px"
+                        href={links [index]}
+                        _hover={{
+                          color: "white",
+                          textDecoration: "none",
+                          fontWeight: "800",
+                        }}
+                        _focus={{
+                          color:"white",
+                          fontWeight:"800"
+                        }}
+                        onClick={onClose}
                         >
-                          <Link
-                          as={NextLink}
-                            href={links[index]}
-                            fontWeight="200"
-                            _hover={{
-                              color: "white",
-                              textDecoration: "none",
-                              fontWeight: "800",
-                            }}
-                          >
+                          <Box
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="left"
+                            padding="0 1rem"
+                            width="100%"
+                            height="100%"
+                            borderBottom="1px solid #607B96"
+                            >
                             {item}
-                          </Link>
-                        </Box>
+
+                            </Box>
+
+                        </Link>
                         <hr />
                       </>
                     );

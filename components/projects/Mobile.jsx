@@ -119,7 +119,7 @@ function Mobile() {
     <>
       <Box width="100%" height="100%" bg="#011627" zIndex="100">
         <Box>
-          <Accordion allowMultiple>
+          <Accordion defaultIndex={[0]} allowMultiple>
             <AccordionItem border="none">
               <h2
                 style={{
@@ -130,7 +130,7 @@ function Mobile() {
                 <AccordionButton>
                   {disableNd ? (
                     <Icon
-                      as={RiArrowDownSFill}
+                      as={RiArrowRightSFill}
                       color="white"
                       boxSize="18px"
                       mr="5px"
@@ -138,7 +138,7 @@ function Mobile() {
                     />
                   ) : (
                     <Icon
-                      as={RiArrowRightSFill}
+                      as={RiArrowDownSFill}
                       color="white"
                       boxSize="18px"
                       mr="5px"
@@ -429,13 +429,14 @@ function Mobile() {
                     {
                         getFilteredProjects().map((project) => (
                   <GridItem 
-                    width="350px"
+                    width="100%"
                     height="310px"
                     // m="20px"
                     display="flex"
                     alignItems="center"
                     flexDir="column"
                     pos="relative"
+                    mb="10px"
 
                    key={project.name}>
                     <Text width="100%" justifyContent="space-evenly"> 
@@ -469,7 +470,7 @@ function Mobile() {
                             color="black"
                           
                             position="absolute"
-                            left="80%"
+                            left="85%"
                             top="15%"
                             
                             />
@@ -481,7 +482,7 @@ function Mobile() {
                             bg="#61DAFB"
                             color="black"
                             position="absolute"
-                            left="80%"
+                            left="85%"
                             top="15%"
                             />
                           )
