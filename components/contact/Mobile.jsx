@@ -22,7 +22,7 @@ function Mobile() {
   const [disableNd, setDisableNd] = useState(false);
   return (
     <>
-      <Box width="100%" height="fit-content" bg="#011627" zIndex="100">
+      <Box width="100%" height="fit-content" bg="#011627" zIndex="100" paddingBottom="100px">
         <Box paddingBottom="60px">
           <Accordion allowMultiple>
             <AccordionItem border="none">
