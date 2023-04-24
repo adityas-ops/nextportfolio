@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useState,useEffect } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { obsidian } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { obsidian ,a11yDark} from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 function Intrest() {
   const [code, setCode] = useState("");
@@ -31,7 +31,7 @@ function Intrest() {
     width="90%"
     
 >
-<SyntaxHighlighter language="markdown" style={obsidian} showLineNumbers={true}  customStyle={customStyle}>
+<SyntaxHighlighter  style={obsidian} showLineNumbers={true}  customStyle={customStyle}>
   {code}
 </SyntaxHighlighter>
 </Box>
