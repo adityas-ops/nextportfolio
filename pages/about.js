@@ -45,7 +45,7 @@ export default function about() {
 
   const headlines = [
     "about-me",
-    "intrests",
+    "skills",
     "B.Tech",
     "Intermediate",
     "High-school",
@@ -255,7 +255,7 @@ export default function about() {
                                   boxSize="18px"
                                   mr="5px"
                                 />
-                                interests
+                                skills
                               </Box>
                             </AccordionButton>
                           </h2>
@@ -279,7 +279,7 @@ export default function about() {
                                   boxSize="16px"
                                   mr="5px"
                                 />
-                                <Text fontSize="14px">interests</Text>
+                                <Text fontSize="14px">skills</Text>
                               </Box>
                             </VStack>
                           </AccordionPanel>
@@ -721,7 +721,7 @@ export default function about() {
                                 boxSize="18px"
                                 mr="5px"
                               />
-                              interests
+                              skills
                             </Box>
                           </AccordionButton>
                         </h2>
@@ -745,7 +745,7 @@ export default function about() {
                                 boxSize="16px"
                                 mr="5px"
                               />
-                              <Text fontSize="14px">interests</Text>
+                              <Text fontSize="14px">skills</Text>
                             </Box>
                           </VStack>
                         </AccordionPanel>
