@@ -10,7 +10,7 @@ function Code() {
   const [data, setData] = useState("");
   const fetchdata = () => {
     fetch(
-      "https://api.github.com/repos/adityas-ops/nextportfolio/contents/components/Code.jsx"
+      "https://api.github.com/repos/adityas-ops/nextportfolio/contents/components/about/Code.jsx"
     )
       .then((response) => response.json())
       .then((data) => {
