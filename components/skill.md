@@ -1,8 +1,8 @@
-/**
-###Skills
+      /**
+      ###Skills
 
-**Programming Language**
-* C & C++
+      **Programming Language**
+      * C & C++
 * Python
 
 **Front-end**

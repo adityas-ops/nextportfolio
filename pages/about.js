@@ -28,7 +28,7 @@ import { BsMarkdownFill } from "react-icons/bs";
 import { useEffect } from "react";
 import High from "@/components/High";
 import Inter from "@/components/Inter";
-import Intrest from "@/components/Intrest";
+import Intrest from "@/components/Skills";
 import Btech from "@/components/Btech";
 import About from "@/components/About";
 import Code from "@/components/Code";

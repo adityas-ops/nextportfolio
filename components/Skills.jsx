@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { obsidian } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
-function Code() {
+function Intrest() {
   const [code, setCode] = useState("");
   const customStyle = {
     backgroundColor: "transparent",
@@ -14,7 +14,7 @@ function Code() {
   };
   const fetchdata = () => {
     fetch(
-      "https://api.github.com/repos/adityas-ops/nextportfolio/contents/pages/api/send.js"
+      "https://api.github.com/repos/adityas-ops/nextportfolio/contents/components/skill.md"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -28,14 +28,14 @@ function Code() {
   }, []);
   return (
     <Box 
-        width="90%"
-        
-    >
-    <SyntaxHighlighter language="javascript" style={obsidian} showLineNumbers={true} wrapLongLines={true}  customStyle={customStyle}>
-      {code.substring(38,700)}
-    </SyntaxHighlighter>
-    </Box>
+    width="90%"
+    
+>
+<SyntaxHighlighter language="markdown" style={obsidian} showLineNumbers={true}  customStyle={customStyle}>
+  {code}
+</SyntaxHighlighter>
+</Box>
   )
 }
 
-export default Code
+export default Intrest
