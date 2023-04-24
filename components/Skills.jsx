@@ -1,7 +1,7 @@
 import { Box, useBreakpointValue } from '@chakra-ui/react';
 import { useState,useEffect } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { obsidian ,a11yDark} from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { obsidian} from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 function Intrest() {
   const [code, setCode] = useState("");

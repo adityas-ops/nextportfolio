@@ -1,6 +1,4 @@
 /**
-###Skills
-
 **Programming Language**
 * C & C++
 * Python
