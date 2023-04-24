@@ -39,10 +39,6 @@ export default function App({ Component, pageProps }) {
       >
       <Component {...pageProps} />
       </div>
-      <div className='container'>
-      <div className='circle1'></div>
-      <div className='circle2'></div>
-      </div>
       <Footer />
       </ChakraProvider>
     </>

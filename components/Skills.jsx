@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, useBreakpointValue } from '@chakra-ui/react';
 import { useState,useEffect } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { obsidian ,a11yDark} from 'react-syntax-highlighter/dist/cjs/styles/hljs';
@@ -26,15 +26,44 @@ function Intrest() {
   useEffect(() => {
     fetchdata();
   }, []);
+
+  const isDesktop = useBreakpointValue({ base: false, lg: true });
+
   return (
     <Box 
     width="90%"
+    height="100%"
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
     
 >
-<SyntaxHighlighter  style={obsidian} showLineNumbers={true}  customStyle={customStyle}>
+  {
+    isDesktop ? (
+      <Box 
+        width='70%'
+        height="100%"
+        
+    >
+      <SyntaxHighlighter  style={obsidian} showLineNumbers={true}  customStyle={customStyle}>
   {code}
 </SyntaxHighlighter>
 </Box>
+    ):
+    (
+    <Box 
+        width='70%'
+        height="100%"
+        
+    >
+    <SyntaxHighlighter  style={obsidian}   customStyle={customStyle}>
+  {code}
+</SyntaxHighlighter>
+    </Box>
+    )
+  }
+</Box>
+
   )
 }
 
