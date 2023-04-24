@@ -1,15 +1,15 @@
 /**
-&hairsp###Skills
+&nbsp;###Skills
 
-**Programming Language**
-* C & C++
-* Python
+&nbsp;**Programming Language**
+&nbsp;* C & C++
+&nbsp;* Python
 
-**Front-end**
-* HTML
-* CSS
-* JavaScript
-* React.js
+&nbsp;**Front-end**
+&nbsp;* HTML
+&nbsp;* CSS
+&nbsp;* JavaScript
+&nbsp; React.js
 * Next.js
 * Material UI
 * Chakra UI
