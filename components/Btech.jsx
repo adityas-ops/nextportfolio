@@ -1,41 +1,66 @@
-import React from 'react'
-import {Text, useBreakpointValue, VStack } from '@chakra-ui/react';
+import { Box, useBreakpointValue } from '@chakra-ui/react';
+import { useState,useEffect } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { obsidian} from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 function Btech() {
-  const data = ["/**","* B. Teach","* 2020-2024","* I am pursing my B.teach","* in computer science & information technology","* from mahatma jyotiba phule rohilkhand university","* bareilly uttar-pradesh","**/"]
-  const data1 = ["Year :  2020-2024", "I'm pursing my B.tech from MJP Rohilkhand University Bareilly, Uttar Pradesh India in Computer Science & Information Technology."]
+  const [code, setCode] = useState("");
+  const customStyle = {
+    backgroundColor: "transparent",
+    padding: "10px",
+    fontSize: "14px",
+    color: "#607B96",
+
+  };
+  const fetchdata = () => {
+    fetch(
+      "https://api.github.com/repos/adityas-ops/nextportfolio/contents/components/high.md"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        const code = atob(data.content);
+        setCode(code);
+      });
+  };
+  useEffect(() => {
+    fetchdata();
+  }, []);
+
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   return (
-    <>
-    <VStack
-       spacing={4}
-    align="stretch"
+    <Box 
+    width="90%"
     height="100%"
-    >
-   {
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
+    
+>
+  {
     isDesktop ? (
-      <>
-      {
-      data.map((item,index)=>{
-        return <Text flexWrap="wrap" m="0px">{index+1}. <Text as="span" ml="10px">{item}</Text></Text>
-      }
-      )
-    }
-      </>
+      <Box 
+        width='90%'
+        height="100%"
+        
+    >
+      <SyntaxHighlighter  style={obsidian} showLineNumbers={true}  customStyle={customStyle}>
+  {code}
+</SyntaxHighlighter>
+</Box>
     ):
     (
-      <>
-      {
-      data1.map((item,index)=>{
-        return <Text lineHeight="40px" m="0px"><Text as="span" ml="10px">{item}</Text></Text>
-      }
-      )
-    }
-      </>
+    <Box 
+        width='90%'
+        height="100%"
+        
+    >
+    <SyntaxHighlighter  style={obsidian}   customStyle={customStyle}>
+  {code}
+</SyntaxHighlighter>
+    </Box>
     )
-   }
-
-    </VStack>
-    </>
+  }
+</Box>
   )
 }
 

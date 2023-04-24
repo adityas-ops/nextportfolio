@@ -13,7 +13,7 @@ function Part() {
   };
   const fetchdata = () => {
     fetch(
-      "https://api.github.com/repos/adityas-ops/nextportfolio/contents/components/skill.md"
+      "https://api.github.com/repos/adityas-ops/nextportfolio/contents/components/high.md"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -39,7 +39,7 @@ function Part() {
   {
     isDesktop ? (
       <Box 
-        width='70%'
+        width='90%'
         height="100%"
         
     >
@@ -50,7 +50,7 @@ function Part() {
     ):
     (
     <Box 
-        width='70%'
+        width='90%'
         height="100%"
         
     >
