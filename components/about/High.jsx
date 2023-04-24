@@ -2,7 +2,7 @@ import { Box, useBreakpointValue } from '@chakra-ui/react';
 import { useState,useEffect } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { obsidian} from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-function Btech() {
+function Part() {
   const [code, setCode] = useState("");
   const customStyle = {
     backgroundColor: "transparent",
@@ -13,7 +13,7 @@ function Btech() {
   };
   const fetchdata = () => {
     fetch(
-      "https://api.github.com/repos/adityas-ops/nextportfolio/contents/components/high.md"
+      "https://api.github.com/repos/adityas-ops/nextportfolio/contents/components/about/high.md"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -64,4 +64,4 @@ function Btech() {
   )
 }
 
-export default Btech
+export default Part

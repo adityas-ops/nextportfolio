@@ -26,12 +26,12 @@ import {
 } from "react-icons/ri";
 import { BsMarkdownFill } from "react-icons/bs";
 import { useEffect } from "react";
-import High from "@/components/High";
-import Inter from "@/components/Inter";
-import Intrest from "@/components/Skills";
-import Btech from "@/components/Btech";
-import About from "@/components/About";
-import Code from "@/components/Code";
+import High from "@/components/about/High";
+import Inter from "@/components/about/Inter";
+import Intrest from "@/components/about/Skills";
+import Btech from "@/components/about/Btech";
+import About from "@/components/about/About";
+import Code from "@/components/about/Code";
 
 export default function about() {
   const [disableNd, setDisableNd] = useState(false);

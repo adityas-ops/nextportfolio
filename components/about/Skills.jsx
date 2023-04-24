@@ -2,7 +2,8 @@ import { Box, useBreakpointValue } from '@chakra-ui/react';
 import { useState,useEffect } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { obsidian} from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-function Part() {
+
+function Intrest() {
   const [code, setCode] = useState("");
   const customStyle = {
     backgroundColor: "transparent",
@@ -13,7 +14,7 @@ function Part() {
   };
   const fetchdata = () => {
     fetch(
-      "https://api.github.com/repos/adityas-ops/nextportfolio/contents/components/high.md"
+      "https://api.github.com/repos/adityas-ops/nextportfolio/contents/components/about/skill.md"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -27,6 +28,7 @@ function Part() {
   }, []);
 
   const isDesktop = useBreakpointValue({ base: false, lg: true });
+
   return (
     <Box 
     width="90%"
@@ -39,7 +41,7 @@ function Part() {
   {
     isDesktop ? (
       <Box 
-        width='90%'
+        width='70%'
         height="100%"
         
     >
@@ -50,7 +52,7 @@ function Part() {
     ):
     (
     <Box 
-        width='90%'
+        width='70%'
         height="100%"
         
     >
@@ -61,7 +63,8 @@ function Part() {
     )
   }
 </Box>
+
   )
 }
 
-export default Part
+export default Intrest
