@@ -58,12 +58,12 @@ export default function about() {
           width="100%"
           position="fixed"
           top="0"
-          height={{
-            base: "fit-content",
-            md: "100vh",
-            lg: "100vh",
-            xl: "100vh",
-          }}
+          // height={{
+          //   base: "fit-content",
+          //   md: "100vh",
+          //   lg: "100vh",
+          //   xl: "100vh",
+          // }}
           overflow="hidden"
           bg="#011627"
         >
@@ -77,9 +77,9 @@ export default function about() {
             }}
             height={{
               base: "fit-content",
-              md: "88vh",
-              lg: "88vh",
-              xl: "88vh",
+              md: "90vh",
+              lg: "90vh",
+              xl: "90vh",
             }}
           >
             <Flex width="100%" height="100%">
@@ -88,7 +88,7 @@ export default function about() {
                   {/* for icons  */}
                   <Box
                     width="15%"
-                    height="100%"
+                    height="110%"
                     borderRight="1px solid #607B96"
                   >
                     <VStack
@@ -127,7 +127,7 @@ export default function about() {
                       />
                     </VStack>
                   </Box>
-                  <Box width="100%">
+                  <Box width="100%" height="100%">
                     <Box
                       height="40px"
                       width="100%"
@@ -198,7 +198,7 @@ export default function about() {
                             <VStack>
                               <Box
                                 width="77%"
-                                height="px"
+                                height="100%"
                                 display="flex"
                                 alignItems="center"
                                 justifyContent="start"
@@ -263,7 +263,7 @@ export default function about() {
                             <VStack>
                               <Box
                                 width="77%"
-                                height="px"
+                                height="100%"
                                 display="flex"
                                 alignItems="center"
                                 justifyContent="start"
@@ -333,7 +333,7 @@ export default function about() {
                             >
                               <Box
                                 width="77%"
-                                height="px"
+                                height="100%"
                                 display="flex"
                                 alignItems="center"
                                 justifyContent="start"
@@ -353,7 +353,7 @@ export default function about() {
                               </Box>
                               <Box
                                 width="77%"
-                                height="px"
+                                height="100%"
                                 display="flex"
                                 alignItems="center"
                                 justifyContent="start"
@@ -463,7 +463,7 @@ export default function about() {
                 </Flex>
               </Box>
               {/* second div */}
-              <Box width="40%" borderRight="1px solid #607B96">
+              <Box width="40%" height="100%" borderRight="1px solid #607B96">
                 <Box
                   height="40px"
                   width="100%"
@@ -492,7 +492,10 @@ export default function about() {
                       <></>
                     )}
                   </Text>
-                  <Flex>
+                  <Flex 
+                  width="100%"
+                    height="110%"
+                  >
                     <Box
                       width="100%"
                       height="500px"
@@ -515,7 +518,7 @@ export default function about() {
                     </Box>
                     <Box
                       width="5%"
-                      height="83.3vh"
+                      height="90vh"
                       borderLeft="1px solid #607B96"
                       display="flex"
                       justifyContent="center"
@@ -526,7 +529,9 @@ export default function about() {
                         height="8px"
                         bg="blue.100"
                         mt="7px"
-                      ></Box>
+                      >
+                        {" "}
+                      </Box>
                     </Box>
                   </Flex>
                 </Box>

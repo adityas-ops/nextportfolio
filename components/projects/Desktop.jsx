@@ -144,7 +144,7 @@ const getFilteredProjects = () => {
           }}
         >
           <Flex width="100%" height="100%">
-            <Box width="22.3%" height="100%" borderRight="1px solid #607B96">
+            <Box width="22.3%" height="110%" borderRight="1px solid #607B96">
               <Box height="40px" width="100%" borderBottom="1px solid #607B96">
                 <Text
                   width="100%"
@@ -432,7 +432,7 @@ const getFilteredProjects = () => {
                     {
                         getFilteredProjects().map((project) => (
                   <GridItem 
-                    width="370px"
+                    width="350px"
                     height="310px"
                     // m="20px"
                     display="flex"

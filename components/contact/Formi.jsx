@@ -40,10 +40,13 @@ function Formi() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(data)
+
             })
             setLoading(false)
             setSubmitted(true)
+
     }
+      
     }
 
 
